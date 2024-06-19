@@ -7,7 +7,8 @@ export function loadMenu() {
 
     const menuContainer = document.createElement('div');
 
-    const title = document.createElement('h1');
+    const title = document.createElement('div');
+    title.classList = 'menu-title';
     title.textContent = 'Menu';
 
     const burgerComplete = document.createElement('img');

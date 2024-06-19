@@ -14,6 +14,7 @@ export function loadHome() {
     image.setAttribute('src', restaurantImg);
 
     const text = document.createElement('p');
+    text.classList = 'home-text';
     text.textContent = `At Burger Haven, we believe that a great burger is more than just a meal—it's an experience. Nestled in the heart of New York city, our restaurant combines the freshest ingredients, innovative recipes, and a passion for culinary excellence to bring you burgers like no other.`;
 
     homeFirstBlock.appendChild(title);
