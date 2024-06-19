@@ -7,7 +7,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
         title: 'Restaurant',
-        template: './src/index.html'
+        template: './src/index.html',
+        favicon: './src/hamburger.svg'
     }),
   ],
   output: {
@@ -26,5 +27,10 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  devServer: {
+    static: './dist', // Directory to serve files from
+    open: true, // Automatically open the browser
+    hot: true, // Enable hot module replacement
   },
 };
