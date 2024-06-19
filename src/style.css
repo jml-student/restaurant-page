@@ -59,4 +59,12 @@ button {
 img { 
     height: 300px;
     width: auto;
+    border-radius: 15px;
+}
+
+/* Home */
+
+.home-title {
+    font-family: "Lilita One", sans-serif;
+    
 }
