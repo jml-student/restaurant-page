@@ -6,24 +6,63 @@ export function loadMenu() {
     const content = document.querySelector('#content');
 
     const menuContainer = document.createElement('div');
+    menuContainer.classList = 'menu-container';
 
-    const title = document.createElement('div');
-    title.classList = 'menu-title';
-    title.textContent = 'Menu';
+    const firstItem = document.createElement('div');
+    firstItem.classList = 'item';
+    const secondItem = document.createElement('div');
+    secondItem.classList = 'item';
+    const thirdItem = document.createElement('div');
+    thirdItem.classList = 'item';
 
-    const burgerComplete = document.createElement('img');
-    burgerComplete.setAttribute('src', burgerCompleteImg);
+    const firstBurger = document.createElement('img');
+    firstBurger.setAttribute('src', burgerCompleteImg);
 
-    const burgerDoble = document.createElement('img');
-    burgerDoble.setAttribute('src', burgerDobleImg);
+    const secondBurger = document.createElement('img');
+    secondBurger.setAttribute('src', burgerDobleImg);
     
-    const burgerBig = document.createElement('img');
-    burgerBig.setAttribute('src', burgerBigImg);
+    const thirdBurger = document.createElement('img');
+    thirdBurger.setAttribute('src', burgerBigImg);
 
-    menuContainer.appendChild(title);
-    menuContainer.appendChild(burgerComplete);
-    menuContainer.appendChild(burgerDoble);
-    menuContainer.appendChild(burgerBig);
+    const firstItemText = document.createElement('div');
+    const firstItemName = document.createElement('p');
+    firstItemName.textContent = 'Complete Burger';
+    const firstItemContent = document.createElement('p');
+    firstItemContent.textContent = '$12.95';
+    
+    const secondItemText = document.createElement('div');
+    const secondItemName = document.createElement('p');
+    secondItemName.textContent = 'Doble Cheese Burger';
+    const secondItemContent = document.createElement('p');
+    secondItemContent.textContent = '$13.95';
+
+    const thirdItemText = document.createElement('div');
+    const thirdItemName = document.createElement('p');
+    thirdItemName.textContent = 'Big Burger';
+    const thirdItemContent = document.createElement('p');
+    thirdItemContent.textContent = '$14.95';
+
+    firstItemText.appendChild(firstItemName);
+    firstItemText.appendChild(firstItemContent);
+
+    secondItemText.appendChild(secondItemName);
+    secondItemText.appendChild(secondItemContent);
+
+    thirdItemText.appendChild(thirdItemName);
+    thirdItemText.appendChild(thirdItemContent);
+
+    firstItem.appendChild(firstItemText);
+    firstItem.appendChild(firstBurger);
+
+    secondItem.appendChild(secondItemText);
+    secondItem.appendChild(secondBurger);
+
+    thirdItem.appendChild(thirdItemText);
+    thirdItem.appendChild(thirdBurger);
+
+    menuContainer.appendChild(firstItem);
+    menuContainer.appendChild(secondItem);
+    menuContainer.appendChild(thirdItem);
 
     content.appendChild(menuContainer);
 }
