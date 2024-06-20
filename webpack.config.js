@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
@@ -27,10 +27,5 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
-  },
-  devServer: {
-    static: './dist', // Directory to serve files from
-    open: true, // Automatically open the browser
-    hot: true, // Enable hot module replacement
   },
 };
